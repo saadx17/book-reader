@@ -1,0 +1,15 @@
+{
+  "id": "book",
+  "title": "Book X",
+  "author": "Author",
+  "chapters": [
+    {
+      "id": 1,
+      "title": "X",
+      "subtitle": "Thanks for reading!",
+      "alignTitle": "center",
+      "differentiator": true,
+      "file": "book-ch1.md"
+    }
+  ]
+}

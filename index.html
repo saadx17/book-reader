@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Book Reader</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <link rel="stylesheet" href="styles/book-reader.css" />
+  </head>
+  <body class="theme-light">
+    <!-- Main Reader Container -->
+    <main class="reader-container">
+      <div class="reader-paper">
+        <!-- Top Toolbar & Header -->
+        <div class="reader-header-wrap">
+          <div class="reader-title-area">
+            <h1 id="book-title" class="book-title">Loading...</h1>
+            <p id="book-subtitle" class="book-subtitle"></p>
+          </div>
+          
+          <div class="reader-controls">
+            <div class="control-buttons">
+              <button id="btn-chapters" class="outline-btn">CHAPTERS</button>
+              <button id="btn-theme" class="outline-btn">THEME</button>
+              <button id="btn-font-style" class="outline-btn">FONT</button>
+              <button id="btn-font-dec" class="outline-btn">A-</button>
+              <button id="btn-font-inc" class="outline-btn">A+</button>
+            </div>
+            <div class="progress-box">
+              <span class="progress-label">READING PROGRESS</span>
+              <div class="progress-track">
+                <div id="progress-bar-fill" class="progress-fill"></div>
+              </div>
+              <span id="progress-text" class="progress-text">1 of 1</span>
+            </div>
+          </div>
+        </div>
+
+        <hr class="reader-divider"/>
+
+        <!-- Chapter Content -->
+        <article id="reader-content" class="reader-content" style="--font-multiplier: 1;">
+          <h2 id="chapter-title" class="chapter-title"></h2>
+          <hr id="chapter-differentiator" class="chapter-differentiator" style="display: none;" />
+          <div id="chapter-body" class="chapter-body">
+          </div>
+        </article>
+
+        <!-- Footer Navigation -->
+        <hr class="reader-divider" />
+        <div class="reader-footer-nav">
+          <button id="btn-prev" class="nav-button outline-btn">&larr; Previous</button>
+          <button id="btn-next" class="nav-button outline-btn">Next &rarr;</button>
+        </div>
+      </div>
+    </main>
+    
+    <!-- Chapters Sidebar -->
+    <div id="sidebar-backdrop" class="sidebar-backdrop hidden"></div>
+    <div id="chapters-sidebar" class="chapters-sidebar hidden">
+      <div class="sidebar-header">
+        <h3>Chapters</h3>
+        <button id="btn-close-sidebar" class="icon-btn">&times;</button>
+      </div>
+      <ul id="chapters-list" class="chapters-list"></ul>
+    </div>
+
+    <!-- Script to Handle Logic -->
+    <script src="../scripts/book-reader.js"></script>
+  </body>
+</html>
