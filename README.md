@@ -6,8 +6,8 @@ A lightweight, customizable web-based book reader. It dynamically loads book dat
 ```text
 book-reader/
 ├── data/
-│   ├── qisas.json       # Example book metadata and chapter list
-│   └── qisas-ch1.md     # Example chapter content in Markdown
+│   ├── book.json       # Example book metadata and chapter list
+│   └── book-ch1.md     # Example chapter content in Markdown
 ├── scripts/
 │   └── book-reader.js   # Application logic
 ├── styles/
