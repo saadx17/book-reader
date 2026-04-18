@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const bookIdParam = urlParams.get('book') || 'book';
 
   // Fetch book data
-  fetch(`../data/${bookIdParam}.json`)
+  fetch(`data/${bookIdParam}.json`)
     .then(res => {
       if (!res.ok) throw new Error("Could not load book data.");
       return res.json();
@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     try {
       if (chapter.file) {
-        const response = await fetch(`../data/${chapter.file}`);
+        const response = await fetch(`data/${chapter.file}`);
         if (!response.ok) throw new Error("Chapter file not found.");
         const markdownText = await response.text();
         chapterBodyEl.innerHTML = marked.parse(markdownText);
