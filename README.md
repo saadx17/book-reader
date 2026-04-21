@@ -41,3 +41,4 @@ To add a new book, create a JSON file in the `data/` directory with the followin
   ]
 }
 ```
+Made for authors, by Abdullah Al Sayb Saad.
